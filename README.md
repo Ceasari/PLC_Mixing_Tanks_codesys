@@ -93,7 +93,8 @@ The Control Object created in CODESYS provides an organized and structured appro
 The State Machines Diagram mentioned in Image 4 has been implemented with the help of the SFC language (Image 7). The SFC blocks specify the conditions that are met at the input. These conditions are written in the ST language (Image 8).  
 
 
-![Img7](/img/img7.png)![Img71](/img/img71.png)
+![Img7](/img/img7.png)
+![Img71](/img/img71.png)
 
 The SFC blocks specify the conditions that are met at the input. These conditions are written in the ST language (Image 8).  
 
