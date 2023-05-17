@@ -27,8 +27,8 @@ The principle relies on the accurate control of valves, level sensors, temperatu
 
 ## High-level description of the task by means of the UML language.
 ### Use Case Diagram (UML).
-Use Case Diagram describes the general functionality of the system (Figure 1). 
-(/img/img1.png)
+Use Case Diagram describes the general functionality of the system (Img 1). 
+[Img1](/img/img1.png)
 
 ### Component (Class) Diagram (UML).
 The diagram illustrates the system's structure and the controlled object (Figure 2). It visually represents the flow of information between the control object's sensors and the program controller through input and output signals. Additionally, it showcases the transmission of commands from the controller to the control object's elements.
