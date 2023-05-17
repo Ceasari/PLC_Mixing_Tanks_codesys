@@ -27,20 +27,20 @@ The principle relies on the accurate control of valves, level sensors, temperatu
 
 ## High-level description of the task by means of the UML language.
 ### Use Case Diagram (UML).
-Use Case Diagram describes the general functionality of the system (Img 1). 
+Use Case Diagram describes the general functionality of the system (Image 1). 
 ![Img1](/img/img1.png)
 
 ### Component (Class) Diagram (UML).
-The diagram illustrates the system's structure and the controlled object (Figure 2). It visually represents the flow of information between the control object's sensors and the program controller through input and output signals. Additionally, it showcases the transmission of commands from the controller to the control object's elements.
+The diagram illustrates the system's structure and the controlled object (Image 2). It visually represents the flow of information between the control object's sensors and the program controller through input and output signals. Additionally, it showcases the transmission of commands from the controller to the control object's elements.
 From the Object of Control, the Control System receives information about the temperature and current level of liquids in both tanks, as well as information about the states of the all valves including steaming valve.
 Depending on the temperature and liquid value, the control System sends commands to the Control Object to turn on/off valves. 
 
-pic2 
+![Img2](/img/img2.png)
 
 ### Activity Diagram (UML)
 The Activity Diagram depicts (Figure 3) the process of mixing and heating liquid components in the mixing tank. It begins with the START button press, opening Valve 1. The system checks until the average level is reached. Then, Valve 1 closes, Valve 2 opens, and the upper level is monitored. If the upper level is reached, Valve 2 closes, the steam valve opens fully, and the temperature is checked. Once the temperature reaches 95 degrees Celsius, the steam valve remains partially open for 10 seconds before draining the liquid. If the lower level signal is detected and the STOP button is not pressed, the drain valve closes, returning to the idle state until the next cycle begins with the START signal.
 
-pic3 
+![Img3](/img/img3.png)
 
 
 ### State Machine Diagram (UML)
@@ -60,7 +60,7 @@ Error State: Represents any error or abnormal condition that may occur during th
 
 These states and transitions enable effective control of the mixing and heating process, ensuring proper mixing and temperature regulation in the mixing tank. 
 
-pic4
+![Img4](/img/img4.png)
 
 ## Description of state diagrams using CODESYS programming languages.
 To ensure the transition of the display of State Diagrams from UML to their description by means of programming languages, the CODESYS industrial automation software package is used.
@@ -69,16 +69,16 @@ Five languages defined by the IEC 61131-3 standard are available for programming
 -	ST - Structured Text.
 
 ### The Control System by means of the SFC language (CODESYS).
-The Control System in this project utilizes the CODESYS programming environment, specifically the Structured Text (ST) language and Function Blocks (FB) to implement the control logic. The implemented part of the system, which is written in CODESYS (Figure 5).
+The Control System in this project utilizes the CODESYS programming environment, specifically the Structured Text (ST) language and Function Blocks (FB) to implement the control logic. The implemented part of the system, which is written in CODESYS (Image 5).
 
-The control logic is organized using Function Blocks, which allow for the creation and inheritance of classes. Each class represents a specific component or functionality of the control system and may include methods and state machines (Figure 5).
+The control logic is organized using Function Blocks, which allow for the creation and inheritance of classes. Each class represents a specific component or functionality of the control system and may include methods and state machines (Image 5).
 
 
-pic 5
+![Img5](/img/img5.png)
 
-Using Functional blocks to organized control logic with OOP principles let us create programs (in CODESYS terminology PLC_PRG) by calling ready to use functional blocks, that also allow us to create any quantity of tanks by creating instances (Figure 6).  
+Using Functional blocks to organized control logic with OOP principles let us create programs (in CODESYS terminology PLC_PRG) by calling ready to use functional blocks, that also allow us to create any quantity of tanks by creating instances (Image 6).  
 
-pic 6
+![Img6](/img/img6.png)
 
 ### The Object of Control by means of the SFC language (CODESYS)
 
@@ -90,19 +90,19 @@ The Control Object's behavior and functionality are defined through the methods 
 The Control Object created in CODESYS provides an organized and structured approach to control and monitor the mixing tank. It encapsulates the necessary components and logic required for precise control and efficient operation of the mixing and heating processes.
 
 
-The State Machines Diagram mentioned in Figure 4 has been implemented with the help of the SFC language (Figure 7). The SFC blocks specify the conditions that are met at the input. These conditions are written in the ST language (Figure 8).  
+The State Machines Diagram mentioned in Image 4 has been implemented with the help of the SFC language (Image 7). The SFC blocks specify the conditions that are met at the input. These conditions are written in the ST language (Image 8).  
 
 
-pic7
+![Img7](/img/img7.png)![Img71](/img/img71.png)
 
-The SFC blocks specify the conditions that are met at the input. These conditions are written in the ST language (Figure 8).  
+The SFC blocks specify the conditions that are met at the input. These conditions are written in the ST language (Image 8).  
 
-pic 8 
+![Img8](/img/img8.png)
 
 ## Visualization
 
 The human-machine interface is implemented by displaying controls, light indicators and temperature sensor indicators on the dashboard.
-Figure 9 shows the control panel
+Image 9 shows the control panel
 
-pic9
+![Img9](/img/img9.png)
 
